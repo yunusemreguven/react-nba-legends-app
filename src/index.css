@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(13, 7, 117);
+  background: linear-gradient(
+    90deg,
+    rgba(13, 7, 117, 0.9360119047619048) 0%,
+    rgba(9, 9, 121, 0.7819502801120448) 35%,
+    rgba(0, 212, 255, 0.5102415966386555) 100%
+  );
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-container {
+  background-image: url(./assets/bg-image.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  margin-top: 2rem;
+}
+
+.player-card {
+  & img {
+    filter: blur(1.02px);
+    transition: transform 0.3s;
+  }
+  height: 315px;
+  &:hover {
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.5);
+    & img {
+      transform: scale(1.2);
+      border-radius: 10px;
+      filter: blur(0);
+    }
+  }
+}
